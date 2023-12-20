@@ -1,4 +1,4 @@
-import { useSubmit } from "react-router-dom"
+// import { useSubmit } from "react-router-dom"
 import Button from "./Button"
 import Input from "./Input"
 
@@ -21,15 +21,19 @@ const CarForm = ( props:CarFormProps) => {
     console.log(props.id)
     console.log(data)
     if (props.id && props.id.length > 0) {
-      server_calls.update(props.id[0], data)
-      console.log(`Updated: ${ data.first } ${ props.id }`)
+        server_calls.update(props.id[0], data)
+        console.log(`Updated: ${ data.make } ${ props.id }`)
+        setTimeout(() => {window.location.reload()}, 1000);
+        event.target.reset()
     } else {
-      dispatch(chooseModel(data.model));
-      dispatch(chooseYear(data.year));
-      dispatch(chooseMake(data.make));
-      dispatch(chooseColor(data.color));
+       
+        dispatch(chooseMake(data.make));
+        dispatch(chooseModel(data.model));
+        dispatch(chooseYear(data.year));
+        dispatch(chooseColor(data.color));
 
-      server_calls.create(store.getState())
+        server_calls.create(store.getState())
+        setTimeout(() => {window.location.reload()}, 1000);
     }
   }
 

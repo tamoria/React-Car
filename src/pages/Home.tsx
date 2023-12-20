@@ -1,4 +1,4 @@
-import Background from '../assets/images/balloon.jpg';
+import Background from '../assets/images/mountains.jpg';
 
 function Home() {
   return (
@@ -7,7 +7,7 @@ function Home() {
       className='flex flex-row justify-center mx-auto bg-cover bg-fixed'
       >
         <div className='flex place-items-center h-screen'>
-          <h3 className='p-5 bg-white bg-opacity-50 text-black rounded'>Where the Journey Matters</h3>
+          <h3 className='p-5 bg-white bg-opacity-50 text-black rounded'>Enjoy the Journey</h3>
         </div>
     </div>
   )
